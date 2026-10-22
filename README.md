@@ -64,26 +64,6 @@ Min SDK 26, target and compile SDK 35.
    gradle :app:assembleDebug
    ```
 
-### Signed release build
-
-The release build is shrunk with R8 and signed only when these environment variables are set (never commit a
-keystore or passwords):
-
-| Variable | Meaning |
-| --- | --- |
-| `KEYSTORE_PATH` | Path to your `.jks` keystore file |
-| `ANDROID_KEYSTORE_PASSWORD` | Keystore password |
-| `ANDROID_KEY_ALIAS` | Key alias |
-| `ANDROID_KEY_PASSWORD` | Key password |
-
-```bash
-gradle :app:assembleRelease :app:bundleRelease
-```
-
-For GitHub Actions, store the base64-encoded keystore and the three passwords/alias as repository secrets
-(`ANDROID_KEYSTORE`, `ANDROID_KEYSTORE_PASSWORD`, `ANDROID_KEY_ALIAS`, `ANDROID_KEY_PASSWORD`) and decode the
-keystore to a file before building.
-
 ## License
 
 TaskHub is free software, licensed under the **GNU General Public License v3.0**. See [LICENSE](LICENSE).
