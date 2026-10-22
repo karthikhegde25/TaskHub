@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">TaskHub</string>
+    <string name="widget_description">Timeline, project, notes or unplanned tasks</string>
+</resources>
